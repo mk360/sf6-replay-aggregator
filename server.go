@@ -2,10 +2,13 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 	"net/url"
 	"os"
+
+	"github.com/joho/godotenv"
 )
 
 // store playlist ids in file, sort them by channel
@@ -73,7 +76,19 @@ type ChannelMapStruct struct {
 
 // var channelNames []string = []string{"SF6 High Level Replays", "The FGC Place"}
 
+func corsMiddleware(next http.Handler) http.Handler {
+	var corsMiddleware = http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+		writer.Header().Add("Access-Control-Allow-Origin", "*")
+		writer.Header().Add("Access-Control-Allow-Methods", "GET")
+		writer.Header().Add("Access-Control-Allow-Headers", "hx-current-url, hx-request")
+		next.ServeHTTP(writer, request)
+	})
+
+	return corsMiddleware
+}
+
 func main() {
+	godotenv.Load()
 	mux := http.NewServeMux()
 
 	ChannelMap := make(map[string]ChannelMapStruct)
@@ -88,7 +103,7 @@ func main() {
 	sendYoutubeApiRequest("UCx2dkBZglt1xlVMbzb63uCQ", httpClient)
 	var playlists map[string]string
 
-	var a = http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
+	var mainHandler = http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		var character = request.PathValue("character")
 		var channelId = request.URL.Query().Get("channelId")
 		channelName, ok := ChannelMap[channelId]
@@ -116,11 +131,14 @@ func main() {
 		// rassembler toutes les vidéos de toutes les chaînes. Ajouter un filtre par nom de chaîne
 	})
 
-	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
+	var rootHandler = http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		writer.Write([]byte("Hello world\n"))
 	})
 
-	http.ListenAndServe(":4444", nil)
+	mux.Handle("/character/{character}", corsMiddleware(mainHandler))
+	mux.Handle("/", corsMiddleware(rootHandler))
+
+	http.ListenAndServe(":4444", mux)
 }
 
 func getVideos(playlistId string, httpClient http.Client) YouTubePlaylistResponse {
@@ -132,6 +150,7 @@ func getVideos(playlistId string, httpClient http.Client) YouTubePlaylistRespons
 		"maxResults": {"50"},
 	}
 	var a = "https://www.googleapis.com/youtube/v3/playlistItems?" + query.Encode()
+	fmt.Println(())
 	request, _ := http.NewRequest("GET", a, nil)
 	response, _ := httpClient.Do(request)
 	data, _ := io.ReadAll(response.Body)
