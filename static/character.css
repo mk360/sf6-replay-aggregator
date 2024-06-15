@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "SF6";
+    src: url("./SF6.otf");
+}
+
+body {
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: #EF624A;
+    font-family: "SF6";
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+
+.backdrop {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.videos {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.test {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    border-radius: 6px;
+}
+    
+html {
+    /* background: url("./ryu.webp"); */
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 100%;
+}

@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
 	"net/url"
@@ -27,7 +26,8 @@ type YouTubePlaylistResponse struct {
 		TotalResults   int `json:"totalResults"`
 		ResultsPerPage int `json:"resultsPerPage"`
 	} `json:"pageInfo"`
-	Items []struct {
+	NextPageToken string `json:"nextPageToken"`
+	Items         []struct {
 		ID      string `json:"id"`
 		Snippet struct {
 			Thumbnails ThumbnailsStruct `json:"thumbnails"`
@@ -150,7 +150,6 @@ func getVideos(playlistId string, httpClient http.Client) YouTubePlaylistRespons
 		"maxResults": {"50"},
 	}
 	var a = "https://www.googleapis.com/youtube/v3/playlistItems?" + query.Encode()
-	fmt.Println(())
 	request, _ := http.NewRequest("GET", a, nil)
 	response, _ := httpClient.Do(request)
 	data, _ := io.ReadAll(response.Body)

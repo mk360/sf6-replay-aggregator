@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "SF6";
+    src: url("./SF6.otf");
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 30px;
+    &.enable-ui {
+        font-size: 55px;
+        font-family: "SF6";
+        letter-spacing: 1px;
+        background: url("./bg.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        text-shadow: 4px 2px 0 white;
+    }
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 150px;
+    grid-row-gap: 150px;
+
+    & div {
+        text-align: center;
+    }
+}
+
+.luke { grid-area: 1 / 2 / 2 / 3; }
+.jamie { grid-area: 1 / 3 / 2 / 4; }
+.manon { grid-area: 2 / 1 / 3 / 2; }
+.kimberly { grid-area: 2 / 2 / 3 / 3; }
+.marisa { grid-area: 2 / 3 / 3 / 4; }
+.lily { grid-area: 2 / 4 / 3 / 5; }
+.jp { grid-area: 3 / 1 / 4 / 2; }
+.juri { grid-area: 3 / 2 / 4 / 3; }
+.deejay { grid-area: 3 / 3 / 4 / 4; }
+.cammy { grid-area: 3 / 4 / 4 / 5; }
+.ryu { grid-area: 4 / 4 / 5 / 5; }
+.ehonda { grid-area: 4 / 3 / 5 / 4; }
+.blanka { grid-area: 4 / 2 / 5 / 3; }
+.guile { grid-area: 4 / 1 / 5 / 2; }
+.ken { grid-area: 5 / 1 / 6 / 2; }
+.chunli { grid-area: 5 / 2 / 6 / 3; }
+.zangief { grid-area: 5 / 3 / 6 / 4; }
+.dhalsim { grid-area: 5 / 4 / 6 / 5; }
+.rashid { grid-area: 6 / 1 / 7 / 2; }
+.aki { grid-area: 6 / 2 / 7 / 3; }
+.ed { grid-area: 6 / 3 / 7 / 4; }
+.akuma { grid-area: 6 / 4 / 7 / 5; } 
