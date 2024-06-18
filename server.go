@@ -107,7 +107,6 @@ func corsMiddleware(next http.Handler) http.Handler {
 	var corsMiddleware = http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		writer.Header().Add("Access-Control-Allow-Origin", "*")
 		writer.Header().Add("Access-Control-Allow-Methods", "GET")
-		writer.Header().Add("Access-Control-Allow-Headers", "hx-current-url, hx-request")
 		next.ServeHTTP(writer, request)
 	})
 
