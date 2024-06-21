@@ -8,9 +8,25 @@
     <body>
         <center><h1>Street Fighter 6 Replay Center</h1></center>
         <div class="character-bar">
-            <div class="p1 character-select"><div style="position: relative"><img style="position: absolute; bottom: 20px; z-index: 1;" src="./static/marisa-portrait.webp" /> Ryu</div> <svg class="arrow" viewbox="0 0 40 20"><path fill="white" d="M 0 0 L 20 20 l 20 -20 L 0 0" /></svg></div>
-            <div class="vs"></div>
-            <div class="p2 character-select">All</div>
+            <div class="p1 character-select">
+                <img style="position: absolute; visibility: hidden; z-index: 1; bottom: 0" src="./static/marisa-portrait.webp" /> 
+                <span>Ryu</span>
+                <svg class="arrow" viewbox="0 0 40 15"><path fill="white" d="M 0 0 L 20 20 l 20 -20 L 0 0" /></svg>
+                <div class="character-thumbnail">
+                    <svg viewbox="0 0 10 10"><rect width="200" height="40" x="0" y="0" fill="rgba(45, 6, 69, 0.6)" />
+                        <rect width="200" height="40" x="0" y="50" fill="rgba(45, 6, 69, 0.6)" />
+                        <rect width="200" height="40" x="0" y="100" fill="rgba(45, 6, 69, 0.6)" />
+                        <rect width="200" height="40" x="0" y="150" fill="rgba(45, 6, 69, 0.6)" />
+                      </svg>
+                    <img src="./static/ryu-portrait.webp" />
+                </div>
+            </div>
+            <div class="vs">VS</div>
+            <div class="p2 character-select">
+                <img style="position: absolute; z-index: 1; bottom: 0" src="./static/marisa-portrait.webp" /> 
+                <svg class="arrow" viewbox="0 0 40 20"><path fill="white" d="M 0 0 L 20 20 l 20 -20 L 0 0" /></svg>
+                <span>Ryu</span>
+            </div>
         </div>
         <script src="./script/index.js"></script>
     </body>

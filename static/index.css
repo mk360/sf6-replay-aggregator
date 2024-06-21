@@ -34,13 +34,42 @@ body {
 }
 
 .character-select {
-    flex: 1;
+    flex: 0.75;
     display: flex;
     justify-content: space-between;
 }
 
+.character-thumbnail {
+    clip-path: path("M 50 0 l 90 0 l 24 32 l -24 144 l -90 0 l -24 -32");
+    height: 700px;
+    width: 700px;
+    background: #6735B2;
+    position: absolute;
+    bottom: 0;
+
+    & svg {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+    }
+
+    & img {
+        position: relative;
+        right: -15px;
+    }
+}
+
+.taa {
+    position: absolute;
+    bottom: 0;
+    padding: 16px;
+    background-color: #280643CC;
+}
+
 .vs {
     flex: 2;
+    text-align: center;
 }
 
 .arrow {
