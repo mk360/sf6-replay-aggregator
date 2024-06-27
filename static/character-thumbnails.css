@@ -1,0 +1,172 @@
+.aki-thumbnail {
+    background-position: 0 0;
+}
+
+.akuma-thumbnail {
+    background-position: -130px 0;
+}
+
+.blanka-thumbnail {
+    background-position: -260px 0;
+}
+
+.cammy-thumbnail {
+    background-position: -390px 0;
+}
+
+.luke-thumbnail {
+    background-position: -520px 0;
+}
+
+.chun-li-thumbnail {
+    background-position: 0 -128px;
+}
+
+.dee-jay-thumbnail {
+    background-position: -128px -128px;
+}
+
+.dhalsim-thumbnail {
+    background-position: -256px -128px;
+}
+
+.ed-thumbnail {
+    background-position: -384px -128px;
+}
+
+.m-bison-thumbnail {
+    background-position: -512px -128px;
+}
+
+.guile-thumbnail {
+    background-position: 0 -256px;
+}
+
+.e-honda-thumbnail {
+    background-position: -128px -256px;
+}
+
+.jamie-thumbnail {
+    background-position: -256px -256px;
+}
+
+.jp-thumbnail {
+    background-position: -384px -256px;
+}
+
+.manon-thumbnail {
+    background-position: -512px -256px;
+}
+
+.juri-thumbnail {
+    background-position: 0 -384px;
+}
+
+.ken-thumbnail {
+    background-position: -128px -384px;
+}
+
+.kimberly-thumbnail {
+    background-position: -256px -384px;
+}
+
+.lily-thumbnail {
+    background-position: -384px -384px;
+}
+
+.marisa-thumbnail {
+    background-position: -514px -384px;
+}
+
+.rashid-thumbnail {
+    background-position: 0 -514px;
+}
+
+.ryu-thumbnail {
+    background-position: -144px -590px;
+}
+
+.zangief-thumbnail {
+    background-position: -256px -514px;
+}
+
+.shadow-layer {
+    background-color: transparent;
+    filter: drop-shadow(0 0 20px white);
+}
+
+.character-image {
+    background-image: url("./spritesheet.webp");
+    height: 100%;
+    background-size: 600%;
+    width: 120px;
+    /* border-image-source: linear-gradient(135deg, #E374CA, white, #E374CA);
+    border-width: 5px;
+    border-style: solid;
+    border-image-slice: 1;
+    background-repeat: no-repeat; */
+    width: 120px;
+}
+
+.character-thumbnail {
+    height: 131px;
+    clip-path: path("M 28 0 l 72 0 l 20 26 l -20 104 l -72 0 l -20 -26 L 28 0");
+    width: fit-content;
+    background: #6735B299;
+    position: relative;
+
+    /* &::before {
+        display: block;
+        content: "";
+        z-index: 1;
+        height: 10px;
+        width: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-width: 16px 0;
+        transform: rotate(30deg);
+    } */
+
+    &::after {
+        inset: 0;
+        display: none;
+        content: "";
+        position: absolute;
+        z-index: 1;
+        background-color: #2D064599;
+    }
+
+    & svg {
+        position: absolute;
+        z-index: -1;
+    }
+
+    &:hover {
+        &::after {
+            display: none;
+        }
+    }
+
+    .thumbnail-line {
+        fill: #E374CA99;
+    }
+
+    .top-left-corner {
+        position: absolute;
+        height: 0;
+        width: 20px;
+        transform: rotate(30deg);
+        border-style: solid;
+        border-color: red;
+        border-width: 0 6px 6px 0;
+        top: 0;
+        right: 0;
+    }
+}
+
+.thumbnail-with-name {
+    & span {
+        padding-left: 36px;
+    }
+}

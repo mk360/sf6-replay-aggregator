@@ -14,7 +14,7 @@ body {
     font-family: "SF6";
     height: 100%;
     letter-spacing: 1px;
-    background: url("./bg.png");
+    /* background: url("./bg.webp"); */
     background-size: 100% 100%;
     background-repeat: no-repeat;
     text-shadow: 4px 2px 0 white;
@@ -31,40 +31,17 @@ body {
     left: 0;
     color: white;
     text-shadow: 4px 2px 0 black;
+
+    & .name {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .character-select {
-    flex: 0.75;
+    flex: 1;
     display: flex;
     justify-content: space-between;
-}
-
-.character-thumbnail {
-    clip-path: path("M 50 0 l 90 0 l 24 32 l -24 144 l -90 0 l -24 -32");
-    height: 700px;
-    width: 700px;
-    background: #6735B2;
-    position: absolute;
-    bottom: 0;
-
-    & svg {
-        position: absolute;
-        z-index: -1;
-        height: 100%;
-        width: 100%;
-    }
-
-    & img {
-        position: relative;
-        right: -15px;
-    }
-}
-
-.taa {
-    position: absolute;
-    bottom: 0;
-    padding: 16px;
-    background-color: #280643CC;
 }
 
 .vs {
@@ -82,6 +59,10 @@ body {
     justify-content: center;
 }
 
+.p1, .p2 {
+    position: relative;
+}
+
 .character-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -94,7 +75,33 @@ body {
     }
 }
 
-.luke { grid-area: 1 / 2 / 2 / 3; }
+.p1-thumbnail {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    /*filter: drop-shadow(0 0 50px blue);
+    background: linear-gradient(135deg, #E374CA, white, #E374CA);
+    padding: 4px; */
+
+    background: linear-gradient(135deg, #E374CA, white, #E374CA);
+    padding: 8px;
+    clip-path: path("M 35 7 l 74 0 l 20 27 l -20 105 l -74 0 l -20 -27");
+
+    .border-container {
+        display: block;
+        content: "";
+        z-index: 1;
+        height: 110%;
+        width: 98%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-width: 16px 0;
+        transform: translateY(-5%) skew(-10deg);
+    }
+}
+
+/* .luke { grid-area: 1 / 2 / 2 / 3; }
 .jamie { grid-area: 1 / 3 / 2 / 4; }
 .manon { grid-area: 2 / 1 / 3 / 2; }
 .kimberly { grid-area: 2 / 2 / 3 / 3; }
@@ -115,4 +122,4 @@ body {
 .rashid { grid-area: 6 / 1 / 7 / 2; }
 .aki { grid-area: 6 / 2 / 7 / 3; }
 .ed { grid-area: 6 / 3 / 7 / 4; }
-.akuma { grid-area: 6 / 4 / 7 / 5; } 
+.akuma { grid-area: 6 / 4 / 7 / 5; }  */
