@@ -8,16 +8,18 @@ html {
     height: 100vh;
 }
 
-body {
-    font-family: sans-serif;
-    font-size: 55px;
+body, button, input {
     font-family: "SF6";
-    height: 100%;
+    font-size: 55px;
     letter-spacing: 1px;
-    /* background: url("./bg.webp"); */
+}
+
+body {
+    text-shadow: 4px 2px 0 white;
+    height: 100%;
+    background: url("./bg.webp");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    text-shadow: 4px 2px 0 white;
 }
 
 .character-bar {
@@ -38,7 +40,7 @@ body {
     }
 }
 
-.character-select {
+.current-character {
     flex: 1;
     display: flex;
     justify-content: space-between;
@@ -49,6 +51,23 @@ body {
     text-align: center;
 }
 
+.shadow-layer {
+    bottom: 0;
+    position: absolute;
+}
+
+.p1 {
+    left: 0;
+}
+
+.p2 {
+    right: 0;
+    
+    & .character-image {
+        transform: rotateY(180deg);
+    }
+}
+
 .arrow {
     height: 60px;
     width: 60px;
@@ -57,10 +76,6 @@ body {
 .grid-container {
     display: flex;
     justify-content: center;
-}
-
-.p1, .p2 {
-    position: relative;
 }
 
 .character-grid {
@@ -76,13 +91,6 @@ body {
 }
 
 .p1-thumbnail {
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    /*filter: drop-shadow(0 0 50px blue);
-    background: linear-gradient(135deg, #E374CA, white, #E374CA);
-    padding: 4px; */
-
     background: linear-gradient(135deg, #E374CA, white, #E374CA);
     padding: 8px;
     clip-path: path("M 35 7 l 74 0 l 20 27 l -20 105 l -74 0 l -20 -27");

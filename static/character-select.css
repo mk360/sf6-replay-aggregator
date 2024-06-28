@@ -1,0 +1,18 @@
+.character-select-list {
+    padding: 2px;
+    background: linear-gradient(to right, #6735B2CC, white, #6735B2CC);
+}
+
+.character-select-bg {
+    background-color: #280643CC;
+    padding: 32px;
+}
+
+.character-search {
+    width: 100%;
+}
+
+.character-grid {
+    display: grid;
+
+}
