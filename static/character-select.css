@@ -1,11 +1,14 @@
 .character-select-list {
     padding: 2px;
     background: linear-gradient(to right, #6735B2CC, white, #6735B2CC);
+    overflow: scroll;
+    scrollbar-color: #E374CA transparent;
 }
 
 .character-select-bg {
     background-color: #280643CC;
     padding: 32px;
+    height: 100%;
 }
 
 .character-search {
@@ -14,5 +17,26 @@
 
 .character-grid {
     display: grid;
-
+    .luke { grid-area: 1 / 2 / 2 / 3; }
+    .jamie { grid-area: 1 / 3 / 2 / 4; }
+    .manon { grid-area: 2 / 1 / 3 / 2; }
+    .kimberly { grid-area: 2 / 2 / 3 / 3; }
+    .marisa { grid-area: 2 / 3 / 3 / 4; }
+    .lily { grid-area: 2 / 4 / 3 / 5; }
+    .jp { grid-area: 3 / 1 / 4 / 2; }
+    .juri { grid-area: 3 / 2 / 4 / 3; }
+    .deejay { grid-area: 3 / 3 / 4 / 4; }
+    .cammy { grid-area: 3 / 4 / 4 / 5; }
+    .ryu { grid-area: 4 / 4 / 5 / 5; }
+    .ehonda { grid-area: 4 / 3 / 5 / 4; }
+    .blanka { grid-area: 4 / 2 / 5 / 3; }
+    .guile { grid-area: 4 / 1 / 5 / 2; }
+    .ken { grid-area: 5 / 1 / 6 / 2; }
+    .chunli { grid-area: 5 / 2 / 6 / 3; }
+    .zangief { grid-area: 5 / 3 / 6 / 4; }
+    .dhalsim { grid-area: 5 / 4 / 6 / 5; }
+    .rashid { grid-area: 6 / 1 / 7 / 2; }
+    .aki { grid-area: 6 / 2 / 7 / 3; }
+    .ed { grid-area: 6 / 3 / 7 / 4; }
+    .akuma { grid-area: 6 / 4 / 7 / 5; } 
 }
