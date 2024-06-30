@@ -4,9 +4,10 @@
     scrollbar-color: #E374CA transparent;
     overflow-x: hidden;
     width: fit-content;
-    max-height: 65vh;
+    height: 65vh;
     position: absolute;
     top: 0;
+    transition: height 200ms linear;
 }
 
 .character-select-bg {
