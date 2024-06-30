@@ -1,49 +1,63 @@
+:root {
+    --first-column: 0;
+    --second-column: -130px;
+    --third-column: -294px;
+    --fourth-column: -440px;
+    --fifth-column: -590px;
+
+    --first-row: 0;
+    --second-row: -128px;
+    --third-row: -300px;
+    --fourth-row: -440px;
+    --fifth-row: -514px;
+}
+
 .aki-thumbnail {
-    background-position: 0 0;
+    background-position: var(--first-column) var(--first-row);
 }
 
 .akuma-thumbnail {
-    background-position: -130px 0;
+    background-position: var(--second-column) var(--first-row);
 }
 
 .blanka-thumbnail {
-    background-position: -260px 0;
+    background-position: var(--third-column) var(--first-row);
 }
 
 .cammy-thumbnail {
-    background-position: -390px 0;
+    background-position: var(--fourth-column) var(--first-row);
 }
 
 .luke-thumbnail {
-    background-position: -590px -10px;
+    background-position: var(--fifth-column) var(--first-row);
 }
 
 .chun-li-thumbnail {
-    background-position: 0 -128px;
+    background-position: var(--first-column) -153px;
 }
 
 .dee-jay-thumbnail {
-    background-position: -128px -128px;
+    background-position: var(--second-column) var(--second-row);
 }
 
 .dhalsim-thumbnail {
-    background-position: -256px -128px;
+    background-position: -286px -158px;
 }
 
 .ed-thumbnail {
-    background-position: -384px -128px;
+    background-position: -434px -148px;
 }
 
 .m-bison-thumbnail {
-    background-position: -512px -128px;
+    background-position: -572px -148px;
 }
 
 .guile-thumbnail {
-    background-position: 0 -256px;
+    background-position: 0 -300px;
 }
 
 .e-honda-thumbnail {
-    background-position: -128px -256px;
+    background-position: -155px -300px;
 }
 
 .jamie-thumbnail {
@@ -51,7 +65,7 @@
 }
 
 .jp-thumbnail {
-    background-position: -384px -256px;
+    background-position: -440px -300px;
 }
 
 .manon-thumbnail {
@@ -59,11 +73,11 @@
 }
 
 .juri-thumbnail {
-    background-position: 0 -384px;
+    background-position: -8px -440px;
 }
 
 .ken-thumbnail {
-    background-position: -128px -384px;
+    background-position: -155px -440px;
 }
 
 .kimberly-thumbnail {
@@ -71,7 +85,7 @@
 }
 
 .lily-thumbnail {
-    background-position: -384px -384px;
+    background-position: -440px -440px;
 }
 
 .marisa-thumbnail {
@@ -79,15 +93,15 @@
 }
 
 .rashid-thumbnail {
-    background-position: 0 -514px;
+    background-position: 0 -590px;
 }
 
 .ryu-thumbnail {
-    background-position: -144px -590px;
+    background-position: -148px -590px;
 }
 
 .zangief-thumbnail {
-    background-position: -256px -514px;
+    background-position: -310px -588px;
 }
 
 .shadow-layer {
@@ -140,6 +154,7 @@
     & svg {
         position: absolute;
         z-index: -1;
+        left: 0;
     }
 
     &:hover {
