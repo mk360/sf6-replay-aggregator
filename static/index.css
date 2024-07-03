@@ -65,6 +65,10 @@ body {
     flex: 1;
     display: flex;
     justify-content: space-between;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
 }
 
 .vs {
