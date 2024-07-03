@@ -8,10 +8,22 @@ html {
     height: 100vh;
 }
 
-body, button, input {
+main, nav, footer, header, button, input {
     font-family: "SF6";
     font-size: 55px;
     letter-spacing: 1px;
+}
+
+header {
+    height: 20vh;
+    text-shadow: none;
+    color: white;
+    display: flex;
+
+    svg {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 body {
@@ -27,7 +39,9 @@ body {
     display: flex;
     justify-content: space-between;
     bottom: 0;
+    border-top: solid 2px #6272D8;
     padding: 20px;
+    height: 7vh;
     right: 0;
     left: 0;
     color: white;
@@ -83,23 +97,4 @@ body {
 .grid-container {
     display: flex;
     justify-content: center;
-}
-
-.p1-thumbnail {
-    background: linear-gradient(135deg, #E374CA, white, #E374CA);
-    padding: 8px;
-    clip-path: path("M 35 7 l 74 0 l 20 27 l -20 105 l -74 0 l -20 -27");
-
-    .border-container {
-        display: block;
-        content: "";
-        z-index: 1;
-        height: 110%;
-        width: 98%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-width: 16px 0;
-        transform: translateY(-5%) skew(-10deg);
-    }
 }
