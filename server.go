@@ -80,7 +80,7 @@ var httpClient = &http.Client{}
 // 	return getPlaylists(channelId, API_KEY, playlistResponse.NextPageToken, playlistResponses)
 // }
 
-var characters [23]string = [23]string{"Luke", "Jamie", "Manon", "Kimberly", "Marisa", "Lily", "JP", "Juri", "Dee Jay", "Cammy", "Ryu", "E. Honda", "Blanka", "Guile", "Ken", "Chun-Li", "Zangief", "Dhalsim", "Rashid", "A.K.I", "Ed", "Akuma", "Bison"}
+var characters [23]string = [23]string{"Luke", "Jamie", "Manon", "Kimberly", "Marisa", "Lily", "JP", "Juri", "Dee Jay", "Cammy", "Ryu", "E. Honda", "Blanka", "Guile", "Ken", "Chun-Li", "Zangief", "Dhalsim", "Rashid", "A.K.I", "Ed", "Akuma", "M. Bison"}
 
 type ChannelMapStruct struct {
 	Name                   string

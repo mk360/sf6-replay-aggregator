@@ -11,15 +11,27 @@
     const p2CharacterSelect = document.getElementById("p2");
 
     p1CharacterSelect.onclick = function() {
-        chosenSide = "p1";
-        toggleClass(characterSelect, "show");
         characterSelect.classList.remove("p2-select");
+        if (chosenSide !== "p1") {
+            if (!characterSelect.classList.contains("show"))  {
+                characterSelect.classList.add("show");
+            }
+        } else {
+            toggleClass(characterSelect, "show");
+        }
+        chosenSide = "p1";
     };
 
     p2CharacterSelect.onclick = function() {
-        toggleClass(characterSelect, "show");
+        if (chosenSide !== "p2") {
+            if (!characterSelect.classList.contains("show"))  {
+                characterSelect.classList.add("show");
+            }
+            characterSelect.classList.add("p2-select");
+        } else {
+            toggleClass(characterSelect, "show");
+        }
         chosenSide = "p2";
-        characterSelect.classList.add("p2-select");
     };
 
     for (let i = 0; i < characterButtons.length; i++) {
@@ -32,13 +44,13 @@
     }
 
     function loadVideos() {
-
+        
     }
 
     function updateCurrentCharacter(side, character) {
         const targetElement = side === "p1" ? p1CharacterSelect : p2CharacterSelect;
         const nameElement = targetElement.getElementsByClassName("name")[0];
-        nameElement.textContent = character;
+        nameElement.textContent = character.replace("_", ". ");
 
         const characterImage = targetElement.getElementsByClassName("character-image")[0];
         const oldCharacterClass = Array.prototype.find.call(characterImage.classList, (l) => l.includes("-thumbnail"));

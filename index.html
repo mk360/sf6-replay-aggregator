@@ -4,964 +4,972 @@
         <link rel="stylesheet" href="./static/index.css" />
         <link rel="stylesheet" href="./static/character-thumbnails.css" />
         <link rel="stylesheet" href="./static/character-select.css" />
+        <link rel="stylesheet" href="./static/videos-section.css" />
         <title>SF6 Replay Center</title>
     </head>
     <body>
-        <header><span>STREET FIGHTER REPLAY CENTER</span>
+        <header class="center-content"><span>STREET FIGHTER REPLAY CENTER</span>
             <!-- <svg viewbox="0 0 1 1"></svg></header> -->
         </header>
-        <main>
-            <nav id="character-select-list">
-                <div class="character-select-bg">
-                    <!-- <input id="p1-search" class="character-search" /> -->
-                    <div class="character-grid">
-                        <button class="character-option" id="luke">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+        <main class="center-content">
+            <!--they are both block elements that can receive generic div markup-->
+            <section id="current-video">
+                
+            </section>
+            <section id="videos">
 
-                                    </svg>
-                                    <div class="character-image luke-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Luke</div>
-                        </button>
-                        <button class="character-option" id="jamie">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-        
-                                    </svg>
-                                    <div class="character-image jamie-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Jamie</div>
-                        </button>
-                        <button class="character-option" id="manon">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image manon-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Manon</div>
-                        </button>
-                        <button class="character-option" id="kimberly">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image kimberly-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Kimberly</div>
-                        </button>
-                        <button class="character-option" id="marisa">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image marisa-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Marisa</div>
-                        </button>
-                        <button class="character-option" id="lily">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image lily-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Lily</div>
-                        </button>
-                        <button class="character-option" id="jp">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image jp-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">JP</div>
-                        </button>
-                        <button class="character-option" id="juri">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image juri-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Juri</div>
-                        </button>
-                        <button class="character-option" id="dee-jay">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image dee-jay-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Dee Jay</div>
-                        </button>
-                        <button class="character-option" id="cammy">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image cammy-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Cammy</div>
-                        </button>
-                        <button class="character-option" id="ryu">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image ryu-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Ryu</div>
-                        </button>
-                        <button class="character-option" id="ehonda">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image e-honda-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">E. Honda</div>
-                        </button>
-                        <button class="character-option" id="blanka">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image blanka-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Blanka</div>
-                        </button>
-                        <button class="character-option" id="guile">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image guile-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Guile</div>
-                        </button>
-                        <button class="character-option" id="ken">
-                            <div class="thumbnail ken">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image ken-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Ken</div>
-                        </button>
-                        <button class="character-option" id="chun-li">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image chun-li-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Chun-Li</div>
-                        </button>
-                        <button class="character-option" id="zangief">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image zangief-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Zangief</div>
-                        </button>
-                        <button class="character-option" id="dhalsim">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image dhalsim-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Dhalsim</div>
-                        </button>
-                        <button class="character-option" id="rashid">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image rashid-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Rashid</div>
-                        </button>
-                        <button class="character-option" id="aki">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image aki-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">A.K.I.</div>
-                        </button>
-                        <button class="character-option" id="ed">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image ed-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Ed</div>
-                        </button>
-                        <button class="character-option" id="akuma">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image akuma-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Akuma</div>
-                        </button>
-                        <button class="character-option" id="bison">
-                            <div class="thumbnail">
-                                <div class="character-thumbnail">
-                                    <svg viewbox="0 0 660 720">
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
-                                        <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
-
-                                    </svg>
-                                    <div class="character-image bison-thumbnail"></div>
-                                </div>
-                            </div>
-                            <div class="slot-name">Bison</div>
-                        </button>
-                    </div>
-                </div>
-            </nav>
+            </section>
         </main>
+        <nav id="character-select-list">
+            <div class="character-select-bg">
+                <!-- <input id="p1-search" class="character-search" /> -->
+                <div class="character-grid">
+                    <button class="character-option" id="luke">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image luke-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Luke</div>
+                    </button>
+                    <button class="character-option" id="jamie">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+    
+                                </svg>
+                                <div class="character-image jamie-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Jamie</div>
+                    </button>
+                    <button class="character-option" id="manon">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image manon-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Manon</div>
+                    </button>
+                    <button class="character-option" id="kimberly">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image kimberly-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Kimberly</div>
+                    </button>
+                    <button class="character-option" id="marisa">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image marisa-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Marisa</div>
+                    </button>
+                    <button class="character-option" id="lily">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image lily-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Lily</div>
+                    </button>
+                    <button class="character-option" id="jp">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image jp-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">JP</div>
+                    </button>
+                    <button class="character-option" id="juri">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image juri-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Juri</div>
+                    </button>
+                    <button class="character-option" id="dee-jay">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image dee-jay-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Dee Jay</div>
+                    </button>
+                    <button class="character-option" id="cammy">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image cammy-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Cammy</div>
+                    </button>
+                    <button class="character-option" id="ryu">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image ryu-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Ryu</div>
+                    </button>
+                    <button class="character-option" id="ehonda">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image e-honda-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">E. Honda</div>
+                    </button>
+                    <button class="character-option" id="blanka">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image blanka-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Blanka</div>
+                    </button>
+                    <button class="character-option" id="guile">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image guile-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Guile</div>
+                    </button>
+                    <button class="character-option" id="ken">
+                        <div class="thumbnail ken">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image ken-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Ken</div>
+                    </button>
+                    <button class="character-option" id="chun-li">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image chun-li-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Chun-Li</div>
+                    </button>
+                    <button class="character-option" id="zangief">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image zangief-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Zangief</div>
+                    </button>
+                    <button class="character-option" id="dhalsim">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image dhalsim-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Dhalsim</div>
+                    </button>
+                    <button class="character-option" id="rashid">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image rashid-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Rashid</div>
+                    </button>
+                    <button class="character-option" id="aki">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image aki-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">A.K.I.</div>
+                    </button>
+                    <button class="character-option" id="ed">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image ed-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Ed</div>
+                    </button>
+                    <button class="character-option" id="akuma">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image akuma-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">Akuma</div>
+                    </button>
+                    <button class="character-option" id="m_bison">
+                        <div class="thumbnail">
+                            <div class="character-thumbnail">
+                                <svg viewbox="0 0 660 720">
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="0" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="25" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="50" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="75" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="100" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="125" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="150" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="175" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="200" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="225" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="250" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="275" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="300" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="325" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="350" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="375" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="400" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="425" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="450" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="475" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="500" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="525" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="550" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="575" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="600" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="625" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="650" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="675" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="700" />
+                                    <rect class="thumbnail-line" width="800" height="20" x="40" y="725" />
+
+                                </svg>
+                                <div class="character-image m_bison-thumbnail"></div>
+                            </div>
+                        </div>
+                        <div class="slot-name">M. Bison</div>
+                    </button>
+                </div>
+            </div>
+        </nav>
         <footer class="character-bar">
             <div class="blur-layer"></div>
             <button id="p1" class="current-character"> 
