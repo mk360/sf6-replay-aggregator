@@ -93,8 +93,3 @@ body {
     height: 60px;
     width: 60px;
 }
-
-.grid-container {
-    display: flex;
-    justify-content: center;
-}
