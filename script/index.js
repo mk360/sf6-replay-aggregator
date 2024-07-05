@@ -6,9 +6,17 @@
     let chosenSide = "p1";
 
     const characterButtons = document.querySelectorAll(".character-grid button");
-
+    const videosSection = document.getElementById("videos");
     const p1CharacterSelect = document.getElementById("p1");
     const p2CharacterSelect = document.getElementById("p2");
+
+    const specialFormatNames = {
+        "ehonda": "E.Honda",
+        "jp": "JP",
+        "m-bison": "M. Bison",
+        "dee-jay": "Dee Jay",
+        "chun-li": "Chun-Li"
+    };
 
     p1CharacterSelect.onclick = function() {
         characterSelect.classList.remove("p2-select");
@@ -40,11 +48,26 @@
             const characterName = this.id;
             updateCurrentCharacter(chosenSide, characterName);
             toggleClass(characterSelect, "show");
+
+            if (chosenSide === "p1") {
+                p1 = characterName;
+            } else {
+                p2 = characterName;
+            }
+
+            loadVideos();
         }
     }
 
+    function formatName(name) {
+        const formattedName = name in specialFormatNames ? specialFormatNames[name] : name[0].toUpperCase() + name.substring(1, name.length);
+        return encodeURIComponent(formattedName);
+    }
+
     function loadVideos() {
-        
+        fetch(`http://localhost:4444/replays?character=${formatName(p1)}`).then((resp) => resp.text()).then((responseText) => {
+            videosSection.innerHTML = responseText;
+        });
     }
 
     function updateCurrentCharacter(side, character) {

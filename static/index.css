@@ -1,6 +1,7 @@
 @font-face {
     font-family: "SF6";
     src: url("./SF6.otf");
+    font-display: swap;
 }
 
 html {

@@ -1,3 +1,67 @@
+#character-select-list {
+    padding: 2px;
+    background: linear-gradient(to right, #6735B2CC, white, #6735B2CC);
+    scrollbar-color: #E374CA transparent;
+    overflow-x: hidden;
+    position: absolute;
+    bottom: 11vh;
+    transition: height 200ms linear;
+    height: 0;
+
+    &.show {
+        height: 65vh;
+    }
+
+    &.p2-select {
+        right: 0;
+    }
+}
+
+.character-select-bg {
+    background-color: #280643CC;
+    padding: 32px;
+
+    .slot-name {
+        color: white;
+        text-shadow: 6px 3px 2px #960433;
+        font-size: 40px;
+    }
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+
+    & div {
+        text-align: center;
+    }
+
+    #luke { grid-area: 1 / 2 / 1 / 2; }
+    #jamie { grid-area: 1 / 3 / 1 / 3; }
+    #manon { grid-area: 2 / 1 / 2 / 1; }
+    #kimberly { grid-area: 2 / 2 / 2 / 2; }
+    #marisa { grid-area: 2 / 3 / 2 / 3; }
+    #lily { grid-area: 2 / 4 / 2 / 4; }
+    #jp { grid-area: 3 / 1 / 3 / 1; }
+    #juri { grid-area: 3 / 2 / 3 / 2; }
+    #dee-jay { grid-area: 3 / 3 / 3 / 3; }
+    #cammy { grid-area: 3 / 4 / 3 / 4; }
+    #ryu { grid-area: 4 / 1 / 4 / 1; }
+    #ehonda { grid-area: 4 / 2 / 4 / 2; }
+    #blanka { grid-area: 4 / 3 / 4 / 3; }
+    #guile { grid-area: 4 / 4 / 4 / 4; }
+    #ken { grid-area: 5 / 1 / 5 / 1; }
+    #chun-li { grid-area: 5 / 2 / 5 / 2; }
+    #zangief { grid-area: 5 / 3 / 6 / 4; }
+    #dhalsim { grid-area: 5 / 4 / 6 / 5; }
+    #rashid { grid-area: 6 / 1 / 7 / 2; }
+    #aki { grid-area: 6 / 2 / 7 / 3; }
+    #ed { grid-area: 6 / 3 / 7 / 4; }
+    #akuma { grid-area: 6 / 4 / 7 / 5; }
+    #m_bison { grid-area: 7 / 2 / 7 / 2; }
+}
+
 :root {
     --first-column: 0;
     --second-column: -130px;
@@ -187,3 +251,106 @@
         fill: #E374CA99;
     }
 }
+
+@font-face {
+    font-family: "SF6";
+    src: url("./SF6.otf");
+    font-display: swap;
+}
+
+html {
+    overflow: hidden;
+    height: 100vh;
+}
+
+main, nav, footer, header, button, input {
+    font-family: "SF6";
+    font-size: 55px;
+    letter-spacing: 1px;
+}
+
+header {
+    height: 20vh;
+    text-shadow: none;
+    color: white;
+    display: flex;
+
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+body {
+    text-shadow: 4px 2px 0 white;
+    height: 100%;
+    background: url("./bg.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.character-bar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    border-top: solid 2px #6272D8;
+    padding: 20px;
+    height: 7vh;
+    right: 0;
+    left: 0;
+    color: white;
+    text-shadow: 4px 2px 0 black;
+
+    & .name {
+        width: 100%;
+        text-align: center;
+    }
+
+    & .blur-layer {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        backdrop-filter: blur(5px);
+        background: linear-gradient(to right, #6272D880, #D05BDD80, #6272D880);
+    }
+}
+
+.current-character {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+}
+
+.vs {
+    flex: 2;
+    text-align: center;
+}
+
+.shadow-layer {
+    bottom: 0;
+    position: absolute;
+}
+
+.p1 {
+    left: 0;
+}
+
+.p2 {
+    right: 0;
+    
+    & .character-image {
+        transform: rotateY(180deg);
+    }
+}
+
+.arrow {
+    height: 60px;
+    width: 60px;
+}
+
+

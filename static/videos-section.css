@@ -1,0 +1,25 @@
+.video-preview-bg {
+    background-color: red;
+}
+
+#videos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1vh;
+    column-gap: 3vh;
+    height: 60vh;
+    /* display: none; */
+    overflow-y: scroll;
+    padding: 4px;
+    width: fit-content;
+    margin: 0 auto;
+
+    &.show-results {
+        display: block;
+    }
+}
+
+
+.candidate-video {
+    height: 100%;
+}

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="./static/index.css" />
         <link rel="stylesheet" href="./static/character-thumbnails.css" />
         <link rel="stylesheet" href="./static/character-select.css" />
         <link rel="stylesheet" href="./static/videos-section.css" />
         <title>SF6 Replay Center</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Security-Policy" content="child-src 'none'; frame-src youtube.com https://www.youtube.com;">
+        <!-- TODO: rajouter la CSP HTTPS une fois la page déployée -->
     </head>
     <body>
         <header class="center-content"><span>STREET FIGHTER REPLAY CENTER</span>
@@ -926,7 +930,7 @@
                         </div>
                         <div class="slot-name">Akuma</div>
                     </button>
-                    <button class="character-option" id="m_bison">
+                    <button class="character-option" id="m-bison">
                         <div class="thumbnail">
                             <div class="character-thumbnail">
                                 <svg viewbox="0 0 660 720">
@@ -1062,6 +1066,6 @@
                 </div>
             </button>
         </footer>
-        <script src="./script/index.js"></script>
+        <script defer src="./script/index.js"></script>
     </body>
 </html>

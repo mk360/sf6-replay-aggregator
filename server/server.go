@@ -2,48 +2,18 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"net/url"
 	"os"
+	"sf6-replays/utils"
 	"strings"
 
 	"github.com/joho/godotenv"
 )
 
 // store playlist ids in file, sort them by channel
-
-type ThumbnailsStruct struct {
-	MaxRes struct {
-		Url    string `json:"url"`
-		Width  int16  `json:"width"`
-		Height int16  `json:"height"`
-	} `json:"maxres"`
-}
-
-type SnippetStruct struct {
-	Snippet struct {
-		Thumbnails ThumbnailsStruct `json:"thumbnails"`
-		Title      string           `json:"title"`
-	} `json:"snippet"`
-}
-
-type VideoResponse struct {
-	NextPageToken string          `json:"nextPageToken"`
-	Items         []SnippetStruct `json:"items"`
-}
-
-type YouTubePlaylistResponse struct {
-	Kind     string `json:"kind"`
-	PageInfo struct {
-		TotalResults   int `json:"totalResults"`
-		ResultsPerPage int `json:"resultsPerPage"`
-	} `json:"pageInfo"`
-	NextPageToken string          `json:"nextPageToken"`
-	Items         []SnippetStruct `json:"items"`
-}
 
 var httpClient = &http.Client{}
 
@@ -80,7 +50,7 @@ var httpClient = &http.Client{}
 // 	return getPlaylists(channelId, API_KEY, playlistResponse.NextPageToken, playlistResponses)
 // }
 
-var characters [23]string = [23]string{"Luke", "Jamie", "Manon", "Kimberly", "Marisa", "Lily", "JP", "Juri", "Dee Jay", "Cammy", "Ryu", "E. Honda", "Blanka", "Guile", "Ken", "Chun-Li", "Zangief", "Dhalsim", "Rashid", "A.K.I", "Ed", "Akuma", "M. Bison"}
+var characters [23]string = [23]string{"Luke", "Jamie", "Manon", "Kimberly", "Marisa", "Lily", "JP", "Juri", "Dee Jay", "Cammy", "Ryu", "E.Honda", "Blanka", "Guile", "Ken", "Chun-Li", "Zangief", "Dhalsim", "Rashid", "A.K.I", "Ed", "Akuma", "M. Bison"}
 
 type ChannelMapStruct struct {
 	Name                   string
@@ -144,11 +114,11 @@ func main() {
 	}}
 
 	var playlists map[string]map[string]string = make(map[string]map[string]string)
-	dir, _ := os.ReadDir("./playlists")
+	dir, _ := os.ReadDir("../playlists")
 	for _, fileName := range dir {
 		var channelPlaylists map[string]string = make(map[string]string)
 		var filename = fileName.Name()
-		channel, _ := os.ReadFile("./playlists/" + filename)
+		channel, _ := os.ReadFile("../playlists/" + filename)
 		var withoutJSON = strings.Replace(filename, ".json", "", 1)
 		json.Unmarshal(channel, &channelPlaylists)
 		playlists[withoutJSON] = channelPlaylists
@@ -162,7 +132,7 @@ func main() {
 
 		var character = request.URL.Query().Get("character")
 		// var opponent = request.URL.Query().Get("opponent")
-		var channelId = request.URL.Query().Get("channelId")
+
 		// var page = request.URL.Query().Get("page")
 
 		if character != "" && !contains(characters[:], character) {
@@ -175,13 +145,8 @@ func main() {
 		// 	return
 		// }
 
-		channelName, ok := ChannelMap[channelId]
-		if channelId != "" && !ok {
-			writer.WriteHeader(400)
-			writer.Write([]byte("Unknown channel: " + channelId + "\n"))
-			return
-		}
-
+		var playlistIds [2]string = [2]string{"", ""}
+		var i int = 0
 		var API_KEY = os.Getenv("API_KEY")
 		var query = url.Values{
 			"part":       {"snippet"},
@@ -189,32 +154,25 @@ func main() {
 			"key":        {API_KEY},
 		}
 
-		if character != "" && channelId != "" {
-			var transformed = channelName.CharacterNameConverter(character)
-			var playlistName = channelName.Name
-			playlistContent, ok := playlists[playlistName]
-
-			if !ok {
-				// shouldn't be there
-				log.Fatalln(transformed, playlistName)
-			}
-
-			characterPlaylistId, ok := playlistContent[transformed]
+		for channelId := range ChannelMap {
+			var channel = ChannelMap[channelId]
+			var characterPlaylists = playlists[channel.Name]
+			var transformed = channel.CharacterNameConverter(character)
+			playlistId, ok := characterPlaylists[transformed]
 
 			if !ok {
 				// shouldn't reach this point
-				log.Fatalln("can't find playlist name for character " + transformed)
+				log.Fatalln("can't find playlist name for transformed query " + transformed)
 			}
-
-			query.Add("playlistId", characterPlaylistId)
-		} else if character != "" {
-			// get from both channels
-			fmt.Println("bojnour")
+			playlistIds[i] = playlistId
+			query.Set("playlistId", playlistId)
+			i++
 		}
 
-		var resp = getVideos(query)
-		marshaled, _ := json.Marshal(resp)
-		writer.Write(marshaled)
+		utils.RenderToHTML(writer, getVideos(query))
+		// marshaled, _ := json.Marshal(resp)
+		// writer.Header().Set("Content-Type", "text/html; charset=utf-8")
+		// writer.Write([]byte("bonjour"))
 		// rassembler toutes les vidéos de toutes les chaînes. Ajouter un filtre par nom de chaîne
 	})
 
@@ -223,9 +181,9 @@ func main() {
 	http.ListenAndServe(":4444", mux)
 }
 
-func getVideos(queryParams url.Values) VideoResponse {
+func getVideos(queryParams url.Values) utils.VideosResponse {
 	var url = "https://www.googleapis.com/youtube/v3/playlistItems?" + queryParams.Encode()
-	var videosResponse VideoResponse
+	var videosResponse utils.VideosResponse
 	request, _ := http.NewRequest("GET", url, nil)
 	data := sendRequest(request)
 	json.Unmarshal(data, &videosResponse)
