@@ -1,25 +1,54 @@
 .video-preview-bg {
-    background-color: red;
+    height: 200px;
 }
 
 #videos {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 1vh;
     column-gap: 3vh;
-    height: 60vh;
-    /* display: none; */
-    overflow-y: scroll;
-    padding: 4px;
     width: fit-content;
+    height: 60vh;
+    display: none;
+    overflow-y: scroll;
+    padding: 0 20px;
     margin: 0 auto;
+    scrollbar-color: #E374CA #6735B2;
 
     &.show-results {
-        display: block;
+        display: grid;
     }
 }
 
+@media (max-width: 1500px) {
+    #videos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-.candidate-video {
+@media (max-width: 1400px) {
+    #videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    #videos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #character-select-list {
+        width: 100%;
+    }
+}
+
+.video-preview-border, .candidate-video {
     height: 100%;
+}
+
+.main-video {
+    height: 100%;
+    width: 100%;
+}
+
+#current-video:has(iframe) + #videos {
+    background-color: red;
 }

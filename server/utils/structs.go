@@ -1,11 +1,9 @@
 package utils
 
 type ThumbnailsStruct struct {
-	MaxRes struct {
-		Url    string `json:"url"`
-		Width  int16  `json:"width"`
-		Height int16  `json:"height"`
-	} `json:"maxres"`
+	Medium struct {
+		Url string `json:"url"`
+	} `json:"medium"`
 }
 
 type SnippetStruct struct {

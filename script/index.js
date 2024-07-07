@@ -7,15 +7,18 @@
 
     const characterButtons = document.querySelectorAll(".character-grid button");
     const videosSection = document.getElementById("videos");
+    const currentVideoContainer = document.getElementById("current-video");
     const p1CharacterSelect = document.getElementById("p1");
     const p2CharacterSelect = document.getElementById("p2");
+    let currentVideoIframe = null;
 
     const specialFormatNames = {
         "ehonda": "E.Honda",
         "jp": "JP",
         "m-bison": "M. Bison",
         "dee-jay": "Dee Jay",
-        "chun-li": "Chun-Li"
+        "chun-li": "Chun-Li",
+        "aki": "A.K.I."
     };
 
     p1CharacterSelect.onclick = function() {
@@ -67,6 +70,21 @@
     function loadVideos() {
         fetch(`http://localhost:4444/replays?character=${formatName(p1)}`).then((resp) => resp.text()).then((responseText) => {
             videosSection.innerHTML = responseText;
+            const videoPreviews = videosSection.querySelectorAll(".video-preview-bg");
+            for (let i = 0; i < videoPreviews.length; i++) {
+                const preview = videoPreviews[i];
+                const youtubeId = preview.attributes["data-youtube-id"].value;
+                preview.onclick = function() {
+                    if (!currentVideoIframe) {
+                        currentVideoIframe = document.createElement("iframe");
+                        currentVideoContainer.appendChild(currentVideoIframe);
+                        currentVideoIframe.classList.add("main-video");
+                        currentVideoIframe.frameborder="0"
+                    }
+                    currentVideoIframe.src = `https://youtube.com/embed/${youtubeId}`;
+                };
+            }
+            videosSection.classList.add("show-results");
         });
     }
 
