@@ -16,7 +16,6 @@ main, nav, footer, header, button, input {
 }
 
 header {
-    height: 20vh;
     text-shadow: none;
     color: white;
     display: flex;

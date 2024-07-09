@@ -10,6 +10,7 @@
     const currentVideoContainer = document.getElementById("current-video");
     const p1CharacterSelect = document.getElementById("p1");
     const p2CharacterSelect = document.getElementById("p2");
+    const mainContainer = document.getElementById("main-display");
     let currentVideoIframe = null;
 
     const specialFormatNames = {
@@ -69,7 +70,12 @@
 
     function loadVideos() {
         fetch(`http://localhost:4444/replays?character=${formatName(p1)}`).then((resp) => resp.text()).then((responseText) => {
+            mainContainer.classList.remove("display-video");
             videosSection.innerHTML = responseText;
+            if (currentVideoContainer.childNodes.length) {
+                currentVideoContainer.removeChild(currentVideoContainer.childNodes[0]);
+                currentVideoIframe = null;
+            }
             const videoPreviews = videosSection.querySelectorAll(".video-preview-bg");
             for (let i = 0; i < videoPreviews.length; i++) {
                 const preview = videoPreviews[i];
@@ -79,11 +85,16 @@
                         currentVideoIframe = document.createElement("iframe");
                         currentVideoContainer.appendChild(currentVideoIframe);
                         currentVideoIframe.classList.add("main-video");
+                        currentVideoIframe.height = 315;
+                        currentVideoIframe.width = 560;
                         currentVideoIframe.frameborder="0"
+                        currentVideoIframe.setAttribute("frameborder", "0");
+                        currentVideoIframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
                     }
                     currentVideoIframe.src = `https://youtube.com/embed/${youtubeId}`;
                 };
             }
+            mainContainer.classList.add("display-video");
             videosSection.classList.add("show-results");
         });
     }
