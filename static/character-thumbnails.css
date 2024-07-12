@@ -159,7 +159,7 @@
     height: 131px;
     clip-path: path("M 28 0 l 72 0 l 20 26 l -20 104 l -72 0 l -20 -26 L 28 0");
     width: fit-content;
-    background: #6735B299;
+    background: repeating-linear-gradient(180deg,#E374CA99, #E374CA99 2%, #6735B299 2%, #6735B299 3%, #E374CA99 3%, #E374CA99 4%);
     position: relative;
 
     &::after {
@@ -183,7 +183,7 @@
         }
     }
 
-    .thumbnail-line {
+    /* .thumbnail-line {
         fill: #E374CA99;
-    }
+    } */
 }
