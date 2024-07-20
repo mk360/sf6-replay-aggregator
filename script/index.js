@@ -3,6 +3,7 @@
 
     let p1 = "ryu";
     let p2 = "ken";
+    let page = 1;
     let chosenSide = "p1";
 
     const characterButtons = document.querySelectorAll(".character-grid button");
@@ -69,7 +70,7 @@
     }
 
     function loadVideos() {
-        fetch(`http://localhost:4444/replays?character=${formatName(p1)}`).then((resp) => resp.text()).then((responseText) => {
+        fetch(`http://localhost:4444/replays?character=${formatName(p1)}&page=${page}`).then((resp) => resp.text()).then((responseText) => {
             mainContainer.classList.remove("display-video");
             videosSection.innerHTML = responseText;
             if (currentVideoContainer.childNodes.length) {
