@@ -23,7 +23,7 @@ const channelNames = {
 };
 
 const urlQueryParams = new URLSearchParams();
-urlQueryParams.append("part", "snippet");
+urlQueryParams.append("part", "snippet,status");
 urlQueryParams.append("maxResults", "50");
 urlQueryParams.append("key", process.env.API_KEY);
 
@@ -34,7 +34,7 @@ function sendRequest(queryParams) {
 }
 
 (async function fct() {
-    await Promise.allSettled(["Ken", "Ryu", "Chun-Li", "Ed", "A.K.I.", "M. Bison", "Guile", "JP", "Juri", "Akuma", "Blanka", "Cammy", "Dhalsim", "Kimberly", "Lily", "Luke", "Manon", "Marisa", "Rashid", "Zangief"].map((character) => {
+    await Promise.all(["Ken", "Ryu", "Chun-Li", "Ed", "A.K.I.", "M. Bison", "Guile", "JP", "Juri", "Akuma", "Blanka", "Cammy", "Dhalsim", "Kimberly", "Lily", "Luke", "Manon", "Marisa", "Rashid", "Zangief", "E.Honda"].map((character) => {
         return generateCharacterPlaylist(character);
     }));
 })();
@@ -50,7 +50,7 @@ async function generateCharacterPlaylist(characterName) {
             urlQueryParams.set("playlistId", playlistId);
 
             const data = await sendRequest(urlQueryParams);
-            resultsArray = resultsArray.concat(data.items.map((item) => ({
+            resultsArray = resultsArray.concat(data.items.filter((video) => video.status.privacyStatus !== "private").map((item) => ({
                 title: item.snippet.title,
                 id: item.snippet.resourceId.videoId,
                 thumbnail: item.snippet.thumbnails.medium.url
