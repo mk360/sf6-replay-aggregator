@@ -1,6 +1,5 @@
-<div class="video-preview-bg" data-youtube-id="{{ .Snippet.ResourceId.VideoId }}">
+<div class="video-preview-bg" data-youtube-id="{{ .Id }}">
     <div class="video-preview-border">
-        <!-- <iframe class="candidate-video" src="https://www.youtube.com/embed/{{ .Snippet.ResourceId.VideoId }}" title="{{ .Snippet.ResourceId.VideoId }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-         <img src="{{ .Snippet.Thumbnails.Medium.Url }}" class="candidate-video" />
+        <img src="{{ .Thumbnail }}" class="candidate-video" />
     </div>
 </div>
