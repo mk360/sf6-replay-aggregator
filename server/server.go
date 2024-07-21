@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"os"
 	"sf6-replays/utils"
@@ -11,13 +10,13 @@ import (
 	"github.com/joho/godotenv"
 )
 
-const PAGE_SIZE int = 25
+const PAGE_SIZE int = 24
 
 var characters [23]string = [23]string{"Luke", "Jamie", "Manon", "Kimberly", "Marisa", "Lily", "JP", "Juri", "Dee Jay", "Cammy", "Ryu", "E.Honda", "Blanka", "Guile", "Ken", "Chun-Li", "Zangief", "Dhalsim", "Rashid", "A.K.I.", "Ed", "Akuma", "M. Bison"}
 
 func corsMiddleware(next http.Handler) http.Handler {
 	var corsMiddleware = http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
-		writer.Header().Add("Access-Control-Allow-Origin", "*")
+		writer.Header().Add("Access-Control-Allow-Origin", os.Getenv("CORS_DOMAIN"))
 		writer.Header().Add("Access-Control-Allow-Methods", "GET")
 		next.ServeHTTP(writer, request)
 	})
@@ -69,21 +68,14 @@ func handleRequest(writer http.ResponseWriter, request *http.Request) {
 
 	var subset = jsonVideos[minOffset:maxOffset]
 
-	fmt.Println(subset)
 	utils.RenderToHTML(writer, subset)
-	// marshaled, _ := json.Marshal(resp)
-	// writer.Header().Set("Content-Type", "text/html; charset=utf-8")
-	// writer.Write([]byte("bonjour"))
-	// rassembler toutes les vidéos de toutes les chaînes. Ajouter un filtre par nom de chaîne
 }
 
 func main() {
-	godotenv.Load()
+	godotenv.Load("./env")
 	mux := http.NewServeMux()
 
-	var mainHandler = http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
-		go handleRequest(writer, request)
-	})
+	var mainHandler = http.HandlerFunc(handleRequest)
 
 	mux.Handle("/replays", corsMiddleware(mainHandler))
 
