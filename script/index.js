@@ -88,9 +88,10 @@
                         currentVideoIframe.classList.add("main-video");
                         currentVideoIframe.height = 315;
                         currentVideoIframe.width = 560;
-                        currentVideoIframe.frameborder="0"
+                        currentVideoIframe.frameborder="0";
+                        currentVideoIframe.allowFullscreen = true;
                         currentVideoIframe.setAttribute("frameborder", "0");
-                        currentVideoIframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+                        currentVideoIframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share displaycapture;");
                     }
                     currentVideoIframe.src = `https://youtube.com/embed/${youtubeId}`;
 
