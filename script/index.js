@@ -15,7 +15,7 @@
     let currentVideoIframe = null;
 
     const specialFormatNames = {
-        "ehonda": "E.Honda",
+        "e_honda": "E.Honda",
         "jp": "JP",
         "m-bison": "M. Bison",
         "dee-jay": "Dee Jay",
@@ -93,6 +93,10 @@
                         currentVideoIframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
                     }
                     currentVideoIframe.src = `https://youtube.com/embed/${youtubeId}`;
+
+                    const clone = preview.cloneNode(true);
+                    videosSection.removeChild(preview);
+                    videosSection.insertBefore(clone, videosSection.firstChild);
                 };
             }
             mainContainer.classList.add("display-video");
@@ -103,7 +107,7 @@
     function updateCurrentCharacter(side, character) {
         const targetElement = side === "p1" ? p1CharacterSelect : p2CharacterSelect;
         const nameElement = targetElement.getElementsByClassName("name")[0];
-        nameElement.textContent = character.replace("_", ". ");
+        nameElement.textContent = character.replace("_", ". ").replace("aki", "A.K.I.").replace("dee-jay", "Dee Jay");
 
         const characterImage = targetElement.getElementsByClassName("character-image")[0];
         const oldCharacterClass = Array.prototype.find.call(characterImage.classList, (l) => l.includes("-thumbnail"));
