@@ -7,7 +7,7 @@
     row-gap: 1vh;
     column-gap: 3vh;
     width: fit-content;
-    height: 75vh;
+    height: 80vh;
     display: none;
     overflow-y: scroll;
     padding: 0 20px;
@@ -16,6 +16,16 @@
 
     &.show-results {
         display: grid;
+    }
+}
+
+#current-video:has(iframe) {
+    height: 62vh;
+}
+
+@media (max-height: 900px) {
+    #current-video:has(iframe) {
+        height: 50vh;
     }
 }
 
@@ -58,7 +68,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 2vh;
+    grid-row-gap: 1vh;
 }
 
 #current-video:has(iframe) + #videos {
@@ -70,5 +80,4 @@
     grid-area: 3 / 1 / 3 / 5;
     width: 100%;
     height: fit-content;
-    padding: 1vh 0;
 }
