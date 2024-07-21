@@ -35,17 +35,17 @@
         chosenSide = "p1";
     };
 
-    p2CharacterSelect.onclick = function() {
-        if (chosenSide !== "p2") {
-            if (!characterSelect.classList.contains("show"))  {
-                characterSelect.classList.add("show");
-            }
-            characterSelect.classList.add("p2-select");
-        } else {
-            toggleClass(characterSelect, "show");
-        }
-        chosenSide = "p2";
-    };
+    // p2CharacterSelect.onclick = function() {
+    //     if (chosenSide !== "p2") {
+    //         if (!characterSelect.classList.contains("show"))  {
+    //             characterSelect.classList.add("show");
+    //         }
+    //         characterSelect.classList.add("p2-select");
+    //     } else {
+    //         toggleClass(characterSelect, "show");
+    //     }
+    //     chosenSide = "p2";
+    // };
 
     for (let i = 0; i < characterButtons.length; i++) {
         const button = characterButtons.item(i);
@@ -70,7 +70,7 @@
     }
 
     function loadVideos() {
-        fetch(`http://localhost:4444/replays?character=${formatName(p1)}&page=${page}`).then((resp) => resp.text()).then((responseText) => {
+        fetch(`http://localhost:4444/replays?character=${formatName(p1)}&opponent=${formatName(p2)}&page=${page}`).then((resp) => resp.text()).then((responseText) => {
             mainContainer.classList.remove("display-video");
             videosSection.innerHTML = responseText;
             if (currentVideoContainer.childNodes.length) {
@@ -123,4 +123,6 @@
             element.classList.add(cssClass);
         }
     }
+
+    loadVideos();
 })();

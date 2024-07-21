@@ -29,6 +29,7 @@ type YouTubeItem struct {
 				Url string `json:"url"`
 			} `json:"medium"`
 		} `json:"thumbnails"`
+		Title string `json:"title"`
 	} `json:"snippet"`
 }
 
@@ -39,6 +40,7 @@ type YouTubeResponse struct {
 
 type StoredVideo struct {
 	Id        string `json:"id"`
+	Title     string `json:"title"`
 	Thumbnail string `json:"img"`
 }
 
@@ -90,6 +92,7 @@ func scrapeCharacterPlaylists(playlistId string, waitGroup *sync.WaitGroup, char
 		for _, item := range data.Items {
 			var storedVideo StoredVideo = StoredVideo{
 				Id:        item.Snippet.ResourceId.Id,
+				Title:     item.Snippet.Title,
 				Thumbnail: item.Snippet.Thumbnails.Medium.Url,
 			}
 

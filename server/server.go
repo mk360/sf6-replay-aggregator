@@ -44,17 +44,6 @@ func handleRequest(writer http.ResponseWriter, request *http.Request) {
 
 	var page = request.URL.Query().Get("page")
 
-	if character != "" && !contains(characters[:], character) {
-		writer.WriteHeader(400)
-		writer.Write([]byte("Unknown character: " + character + "\n"))
-		return
-	}
-
-	file, _ := os.ReadFile("./playlists/" + character + ".json")
-
-	var jsonVideos []utils.JSONVideo = []utils.JSONVideo{}
-	json.Unmarshal(file, &jsonVideos)
-
 	pagination, e := strconv.Atoi(page)
 
 	if e != nil {
@@ -63,10 +52,33 @@ func handleRequest(writer http.ResponseWriter, request *http.Request) {
 		return
 	}
 
+	if character != "" && !contains(characters[:], character) {
+		writer.WriteHeader(400)
+		writer.Write([]byte("Unknown character: " + character + "\n"))
+		return
+	}
+
+	// if opponent != "" && !contains(characters[:], opponent) {
+	// 	writer.WriteHeader(400)
+	// 	writer.Write([]byte("Unknown opponent: " + opponent + "\n"))
+	// 	return
+	// }
+
+	characterFile, _ := os.ReadFile("./playlists/" + character + ".json")
+
+	var characterVideos []utils.JSONVideo = []utils.JSONVideo{}
+	// var opponentVideos []utils.JSONVideo = []utils.JSONVideo{}
+	json.Unmarshal(characterFile, &characterVideos)
+
+	// if opponent != "" && character != opponent {
+	// 	opponentFile, _ := os.ReadFile("./playlists/" + opponent + ".json")
+	// 	json.Unmarshal(opponentFile, &opponentVideos)
+	// }
+
 	var minOffset = (pagination - 1) * PAGE_SIZE
 	var maxOffset = pagination * PAGE_SIZE
 
-	var subset = jsonVideos[minOffset:maxOffset]
+	var subset = characterVideos[minOffset:maxOffset]
 
 	utils.RenderToHTML(writer, subset)
 }
