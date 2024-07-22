@@ -84,7 +84,7 @@ func handleRequest(writer http.ResponseWriter, request *http.Request) {
 }
 
 func main() {
-	godotenv.Load("./env")
+	godotenv.Load("./.env")
 	mux := http.NewServeMux()
 
 	var mainHandler = http.HandlerFunc(handleRequest)

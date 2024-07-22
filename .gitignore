@@ -1,3 +1,4 @@
 node_modules
 .env
 server/playlists/*
+script/api.js

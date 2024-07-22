@@ -102,6 +102,7 @@ body {
 
 .title {
     grid-area: 1 / 2 / 1 / 2;
+    text-align: center;
 }
 
 .side-icons {

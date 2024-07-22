@@ -17,7 +17,7 @@
     const specialFormatNames = {
         "e_honda": "E.Honda",
         "jp": "JP",
-        "m-bison": "M. Bison",
+        "m_bison": "M. Bison",
         "dee-jay": "Dee Jay",
         "chun-li": "Chun-Li",
         "aki": "A.K.I."
@@ -70,7 +70,7 @@
     }
 
     function loadVideos() {
-        fetch(`${API_URL}/replays?character=${formatName(p1)}&opponent=${formatName(p2)}&page=${page}`).then((resp) => resp.text()).then((responseText) => {
+        fetch(`${API_URL}/replays?character=${formatName(p1)}&page=${page}`).then((resp) => resp.text()).then((responseText) => {
             mainContainer.classList.remove("display-video");
             videosSection.innerHTML = responseText;
             if (currentVideoContainer.childNodes.length) {
@@ -108,7 +108,7 @@
     function updateCurrentCharacter(side, character) {
         const targetElement = side === "p1" ? p1CharacterSelect : p2CharacterSelect;
         const nameElement = targetElement.getElementsByClassName("name")[0];
-        nameElement.textContent = character.replace("_", ". ").replace("aki", "A.K.I.").replace("dee-jay", "Dee Jay");
+        nameElement.textContent = character.replace("_", ". ").replace("aki", "A.K.I.").replace("dee-jay", "Dee Jay").replace("m_bison", "M. Bison");
 
         const characterImage = targetElement.getElementsByClassName("character-image")[0];
         const oldCharacterClass = Array.prototype.find.call(characterImage.classList, (l) => l.includes("-thumbnail"));
