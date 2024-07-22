@@ -70,7 +70,7 @@
     }
 
     function loadVideos() {
-        fetch(`http://localhost:4444/replays?character=${formatName(p1)}&opponent=${formatName(p2)}&page=${page}`).then((resp) => resp.text()).then((responseText) => {
+        fetch(`${API_URL}/replays?character=${formatName(p1)}&opponent=${formatName(p2)}&page=${page}`).then((resp) => resp.text()).then((responseText) => {
             mainContainer.classList.remove("display-video");
             videosSection.innerHTML = responseText;
             if (currentVideoContainer.childNodes.length) {
