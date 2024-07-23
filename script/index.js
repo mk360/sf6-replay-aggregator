@@ -69,6 +69,33 @@
         return encodeURIComponent(formattedName);
     }
 
+    function selectVideo() {
+        const youtubeId = this.attributes["data-youtube-id"].value;
+        const currentChoice = document.querySelector(".current");
+        if (currentChoice) {
+            currentChoice.classList.remove("current");
+        }
+            
+        if (!currentVideoIframe) {
+            currentVideoIframe = document.createElement("iframe");
+            currentVideoContainer.appendChild(currentVideoIframe);
+            currentVideoIframe.classList.add("main-video");
+            currentVideoIframe.height = 315;
+            currentVideoIframe.width = 560;
+            currentVideoIframe.frameborder="0";
+            currentVideoIframe.allowFullscreen = true;
+            currentVideoIframe.setAttribute("frameborder", "0");
+            currentVideoIframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share displaycapture;");
+        }
+        currentVideoIframe.src = `https://youtube.com/embed/${youtubeId}`;
+
+        const clone = this.cloneNode(true);
+        clone.classList.add("current");
+        clone.onclick = selectVideo.bind(clone);
+        videosSection.removeChild(this);
+        videosSection.insertBefore(clone, videosSection.firstChild);
+    };
+
     function loadVideos() {
         fetch(`${API_URL}/replays?character=${formatName(p1)}&page=${page}`).then((resp) => resp.text()).then((responseText) => {
             mainContainer.classList.remove("display-video");
@@ -80,25 +107,8 @@
             const videoPreviews = videosSection.querySelectorAll(".video-preview-bg");
             for (let i = 0; i < videoPreviews.length; i++) {
                 const preview = videoPreviews[i];
-                const youtubeId = preview.attributes["data-youtube-id"].value;
-                preview.onclick = function() {
-                    if (!currentVideoIframe) {
-                        currentVideoIframe = document.createElement("iframe");
-                        currentVideoContainer.appendChild(currentVideoIframe);
-                        currentVideoIframe.classList.add("main-video");
-                        currentVideoIframe.height = 315;
-                        currentVideoIframe.width = 560;
-                        currentVideoIframe.frameborder="0";
-                        currentVideoIframe.allowFullscreen = true;
-                        currentVideoIframe.setAttribute("frameborder", "0");
-                        currentVideoIframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share displaycapture;");
-                    }
-                    currentVideoIframe.src = `https://youtube.com/embed/${youtubeId}`;
-
-                    const clone = preview.cloneNode(true);
-                    videosSection.removeChild(preview);
-                    videosSection.insertBefore(clone, videosSection.firstChild);
-                };
+                // todo : delegate click event
+                preview.onclick = selectVideo.bind(preview);
             }
             mainContainer.classList.add("display-video");
             videosSection.classList.add("show-results");
