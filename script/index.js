@@ -75,6 +75,13 @@
         if (currentChoice) {
             currentChoice.classList.remove("current");
         }
+
+        try {
+            videosSection.scroll({
+                top: 0,
+                left: 0
+            });
+        } finally {}
             
         if (!currentVideoIframe) {
             currentVideoIframe = document.createElement("iframe");

@@ -9,7 +9,6 @@
     width: fit-content;
     height: 80vh;
     display: none;
-    padding: 10px;
     overflow-y: scroll;
     margin: 0 auto;
     scrollbar-color: #E374CA #6735B2;
@@ -77,7 +76,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0.1vh;
+    grid-row-gap: 0.8vh;
 }
 
 #current-video:has(iframe) + #videos {
